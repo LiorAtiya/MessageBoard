@@ -50,6 +50,7 @@ int main() {
 	flag.post(UINT_MAX-1,0,Direction::Horizontal,"oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo");
 
 	flag.show();
+
     return 0;
 }
 

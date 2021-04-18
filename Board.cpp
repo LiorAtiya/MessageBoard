@@ -6,6 +6,12 @@ using namespace std;
 
 namespace ariel
 {
+    //Index of message boundaries in the board
+    uint indexMinCol;
+    uint indexMaxCol;
+    uint indexMinRow;
+    uint indexMaxRow;
+    
     //Gets a position (row and column), direction (horizontal or vertical)
     //, and a string that represents an ad, and pastes the string on the board
     //in the appropriate place.
@@ -19,7 +25,7 @@ namespace ariel
                 indexMinCol = column;
                 indexMaxCol = column + lengthMsg - 1;
                 indexMaxRow = indexMinRow = row;
-                matrix.resize(indexMaxRow-indexMinRow+1,vector<char>(indexMaxCol-indexMinCol+1,'_'));
+                matrix.resize(1,vector<char>(indexMaxCol-indexMinCol+1,'_'));
             }
             //Adds rows to the matrix downwards
             if(row > indexMaxRow){
